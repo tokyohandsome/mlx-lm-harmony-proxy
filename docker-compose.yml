@@ -1,0 +1,8 @@
+services:
+  mlx-lm-harmony-proxy:
+    build: .
+    container_name: mlx-lm-harmony-proxy
+    ports:
+      - "${PROXY_PORT:-8585}:8585"
+    env_file: .env
+    restart: always
